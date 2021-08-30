@@ -1,0 +1,10 @@
+<Project>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="$(XamarinFormsVersion)">
+    </PackageReference>
+    <PackageReference Condition="'$(IncludeMaps)' == 'true'" Include="Xamarin.Forms.Maps" Version="$(XamarinFormsVersion)">
+    </PackageReference>
+    <PackageReference Condition="'$(IncludeMaterial)' == 'true'" Include="Xamarin.Forms.Visual.Material" Version="$(XamarinFormsVersion)">
+    </PackageReference>
+  </ItemGroup>
+</Project>

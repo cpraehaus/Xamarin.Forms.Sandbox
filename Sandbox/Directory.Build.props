@@ -1,0 +1,20 @@
+<Project>
+  <PropertyGroup>
+    <FromSource>false</FromSource>
+    <XamarinFormsVersion>5.0.0.2083</XamarinFormsVersion>
+    <XamarinFormsSourceDir>..\Xamarin.Forms</XamarinFormsSourceDir>
+    <!-- Defaults -->
+    <IncludeDualScreen Condition="'$(IncludeDualScreen)' == ''">false</IncludeDualScreen>
+    <IncludeMaterial Condition="'$(IncludeMaterial)' == ''">false</IncludeMaterial>
+    <IncludeMaps Condition="'$(IncludeMaps)' == ''">false</IncludeMaps>
+  </PropertyGroup>
+  
+  <!-- Define some constants -->
+  <PropertyGroup>
+    <DefineConstants Condition="'$(IncludeMaterial)' == 'true'">$(DefineConstants);VISUAL</DefineConstants>
+    <DefineConstants Condition="'$(IncludeDualScreen)' == 'true'">$(DefineConstants);DUALSCREEN</DefineConstants>
+  </PropertyGroup>
+  
+  <!-- Import SampleImports (defines property XamarinFormsSource) -->
+  <Import Project="$(XamarinFormsSourceDir)\SampleImports\Directory.Build.props" Condition="$(FromSource) == 'true'" />
+ </Project>

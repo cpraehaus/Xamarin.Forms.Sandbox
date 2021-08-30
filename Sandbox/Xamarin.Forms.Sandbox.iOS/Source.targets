@@ -1,0 +1,5 @@
+<Project>
+  <Import Project="$(XamarinFormsSource)SampleImports\Directory.Build.targets" Condition="$(FromSource) == 'true'" />
+  <Import Condition="'$(IncludeMaterial)' == 'true'" Project="Source.material.targets"/>
+  <Import Condition="'$(IncludeMaps)' == 'true'" Project="Source.maps.targets"/>
+</Project>
